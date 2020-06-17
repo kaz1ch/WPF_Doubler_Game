@@ -28,13 +28,28 @@ namespace WPF_Doubler_Game
             var Rand_Value = new Random();
             int Fin_Value = Rand_Value.Next(1024, 100000);
 
-            var FinValueTextBox = new TextBox();
+            //var FinValueTextBox = new TextBox();
             FinValueTextBox.Text = Fin_Value.ToString();
 
             var ActualNumber = 0;
-            var ActualValueTextBox = new TextBox();
+
+            //var ActualValueTextBox = new TextBox();
             ActualValueTextBox.Text = ActualNumber.ToString();
 
+        }
+
+        private void PlusButton_Click(object sender, RoutedEventArgs e)
+        {
+            var ActualNumber = int.Parse(ActualValueTextBox.Text);
+            ActualNumber++;
+            ActualValueTextBox.Text = ActualNumber.ToString();
+        }
+
+        private void MultiplyButton_Click(object sender, RoutedEventArgs e)
+        {
+            var ActualNumber = int.Parse(ActualValueTextBox.Text);
+            ActualNumber*=2;
+            ActualValueTextBox.Text = ActualNumber.ToString();
         }
     }
 }

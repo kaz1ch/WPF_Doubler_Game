@@ -7,11 +7,11 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        <TextBox x:Name="FinValueTextBox" HorizontalAlignment="Left" Height="27" Margin="481,55,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="90" FontFamily="Bookman Old Style" FontSize="20"/>
+        <TextBox x:Name="FinValueTextBox" HorizontalAlignment="Left" Height="27" Margin="481,55,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="90" FontFamily="Bookman Old Style" FontSize="20" IsEnabled="False"/>
         <Label Content="Для победы требуется получить число" HorizontalAlignment="Left" Height="27" Margin="202,55,0,0" VerticalAlignment="Top" Width="279" FontFamily="Bookman Old Style" FontSize="14"/>
         <Label Content="Число на данный ход" HorizontalAlignment="Left" Margin="315,82,0,0" VerticalAlignment="Top" FontFamily="Bookman Old Style" FontSize="14" Width="166"/>
-        <TextBox x:Name="ActualValueTextBox" HorizontalAlignment="Left" Height="26" Margin="481,82,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="90" FontFamily="Bookman Old Style" FontSize="20"/>
-        <Button x:Name="PlusButton" Content="+1" HorizontalAlignment="Left" Margin="358,137,0,0" VerticalAlignment="Top" Width="35" FontFamily="Bookman Old Style" FontSize="20"/>
-        <Button x:Name="MultiplyButton" Content="x2" HorizontalAlignment="Left" Margin="398,137,0,0" VerticalAlignment="Top" Width="35" FontFamily="Bookman Old Style" FontSize="20"/>
+        <TextBox x:Name="ActualValueTextBox" HorizontalAlignment="Left" Height="26" Margin="481,82,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="90" FontFamily="Bookman Old Style" FontSize="20" IsEnabled="False"/>
+        <Button x:Name="PlusButton" Content="+1" HorizontalAlignment="Left" Margin="358,137,0,0" VerticalAlignment="Top" Width="35" FontFamily="Bookman Old Style" FontSize="20" Click="PlusButton_Click"/>
+        <Button x:Name="MultiplyButton" Content="x2" HorizontalAlignment="Left" Margin="398,137,0,0" VerticalAlignment="Top" Width="35" FontFamily="Bookman Old Style" FontSize="20" Click="MultiplyButton_Click"/>
     </Grid>
 </Window>
