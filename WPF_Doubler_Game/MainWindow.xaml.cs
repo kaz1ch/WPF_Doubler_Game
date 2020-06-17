@@ -26,30 +26,72 @@ namespace WPF_Doubler_Game
             Title = "Game of Doubler";
 
             var Rand_Value = new Random();
-            int Fin_Value = Rand_Value.Next(1024, 100000);
+            int Fin_Value = Rand_Value.Next(512, 2048);
 
-            //var FinValueTextBox = new TextBox();
             FinValueTextBox.Text = Fin_Value.ToString();
 
             var ActualNumber = 0;
-
-            //var ActualValueTextBox = new TextBox();
             ActualValueTextBox.Text = ActualNumber.ToString();
 
+            var TurnNumber = 0;
+            TurnNumberTextBox.Text = TurnNumber.ToString();
         }
 
         private void PlusButton_Click(object sender, RoutedEventArgs e)
         {
             var ActualNumber = int.Parse(ActualValueTextBox.Text);
+            var FinalNumber = int.Parse(FinValueTextBox.Text);
+            var TurnNumber = int.Parse(TurnNumberTextBox.Text);
+
             ActualNumber++;
             ActualValueTextBox.Text = ActualNumber.ToString();
+
+            TurnNumber++;
+            TurnNumberTextBox.Text = TurnNumber.ToString();
+
+            var WinMessage = $"Победа! Вы прошли игру за {TurnNumber} ходов!";
+            var LoseMessage = $"Вас наполняет горечь поражения! Вы не только не прошли игру, но и потратили на это {TurnNumber} ходов!";
+
+            if (ActualNumber == FinalNumber)
+            {
+                MessageBox.Show(WinMessage);
+                this.Close();
+            }
+
+            if (ActualNumber > FinalNumber)
+            {
+                MessageBox.Show(LoseMessage);
+                this.Close();
+            }
+
         }
 
         private void MultiplyButton_Click(object sender, RoutedEventArgs e)
         {
             var ActualNumber = int.Parse(ActualValueTextBox.Text);
-            ActualNumber*=2;
+            var FinalNumber = int.Parse(FinValueTextBox.Text);
+            var TurnNumber = int.Parse(TurnNumberTextBox.Text);
+
+            ActualNumber *=2;
             ActualValueTextBox.Text = ActualNumber.ToString();
+
+            TurnNumber++;
+            TurnNumberTextBox.Text = TurnNumber.ToString();
+
+            var WinMessage = $"Победа! Вы прошли игру за {TurnNumber} ходов!";
+            var LoseMessage = $"Вас наполняет горечь поражения! Вы не только не прошли игру, но и потратили на это {TurnNumber} ходов!";
+
+            if (ActualNumber == FinalNumber)
+            {
+                MessageBox.Show(WinMessage);
+                this.Close();
+            }
+
+            if (ActualNumber > FinalNumber)
+            {
+                MessageBox.Show(LoseMessage);
+                this.Close();
+            }
         }
     }
 }

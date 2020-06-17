@@ -13,5 +13,7 @@
         <TextBox x:Name="ActualValueTextBox" HorizontalAlignment="Left" Height="26" Margin="481,82,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="90" FontFamily="Bookman Old Style" FontSize="20" IsEnabled="False"/>
         <Button x:Name="PlusButton" Content="+1" HorizontalAlignment="Left" Margin="358,137,0,0" VerticalAlignment="Top" Width="35" FontFamily="Bookman Old Style" FontSize="20" Click="PlusButton_Click"/>
         <Button x:Name="MultiplyButton" Content="x2" HorizontalAlignment="Left" Margin="398,137,0,0" VerticalAlignment="Top" Width="35" FontFamily="Bookman Old Style" FontSize="20" Click="MultiplyButton_Click"/>
+        <TextBox x:Name="TurnNumberTextBox" HorizontalAlignment="Left" Height="25" Margin="729,385,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="53" FontSize="20" FontFamily="Bookman Old Style" IsEnabled="False"/>
+        <Label Content="Номер текущего хода:" HorizontalAlignment="Left" Margin="562,384,0,0" VerticalAlignment="Top" FontSize="14" FontFamily="Bookman Old Style"/>
     </Grid>
 </Window>
